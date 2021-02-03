@@ -1,0 +1,3 @@
+/home/dimitis/Yandex.Disk/labs/Course_work_hl/project/build/CMakeFiles/rebuild_cache.dir
+/home/dimitis/Yandex.Disk/labs/Course_work_hl/project/build/CMakeFiles/Simple_Player.dir
+/home/dimitis/Yandex.Disk/labs/Course_work_hl/project/build/CMakeFiles/edit_cache.dir
