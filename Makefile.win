@@ -1,0 +1,46 @@
+# Project: Simple_player
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Check.o DecodeError.o main.o OpenFile.o ReadSceneNum.o Scene.o Graphics_funcs.o
+LINKOBJ  = Check.o DecodeError.o main.o OpenFile.o ReadSceneNum.o Scene.o Graphics_funcs.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32 -m32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Simple_player.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Check.o: Check.cpp
+	$(CPP) -c Check.cpp -o Check.o $(CXXFLAGS)
+
+DecodeError.o: DecodeError.cpp
+	$(CPP) -c DecodeError.cpp -o DecodeError.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+OpenFile.o: OpenFile.cpp
+	$(CPP) -c OpenFile.cpp -o OpenFile.o $(CXXFLAGS)
+
+ReadSceneNum.o: ReadSceneNum.cpp
+	$(CPP) -c ReadSceneNum.cpp -o ReadSceneNum.o $(CXXFLAGS)
+
+Scene.o: Scene.cpp
+	$(CPP) -c Scene.cpp -o Scene.o $(CXXFLAGS)
+
+Graphics_funcs.o: Graphics_funcs.cpp
+	$(CPP) -c Graphics_funcs.cpp -o Graphics_funcs.o $(CXXFLAGS)
