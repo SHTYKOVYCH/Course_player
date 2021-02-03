@@ -1,0 +1,30 @@
+FILM
+SCENENUM	char
+SCENE
+SCENEFIELDS int
+	BGCLR
+		char - color
+	COLOR
+		char - color
+	SHAPE
+		char - type
+		0 - point
+			1x int - x
+			   int - y
+		1 - line
+			2x int - x
+			   int - y
+		2- quad, 5 - wired quad
+			4x int - x
+			   int - y
+		3 - triangle, 6 - wired triangle
+			3x int - x
+			   int - y
+		4 - sircle, 7 - wired circle
+			3x int - x
+			   int - y
+			   int - rad
+	SOUND
+		float - frequensy
+		int - duration in mc
+	FRAME
